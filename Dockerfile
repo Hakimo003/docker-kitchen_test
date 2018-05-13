@@ -43,7 +43,7 @@ RUN /bin/bash -lc "curl -L get.rvm.io | bash -s stable"
 RUN /bin/bash -lc "rvm autolibs fail && rvm autolibs enable"
 RUN /bin/bash -lc "rvm install ruby-2.4.3 && rvm use 2.4.3"
 
-COPY Docker/serverspec /home/serverspec
+COPY serverspec /home/serverspec
 RUN /bin/bash -lc "chmod 777 /home/serverspec"
 RUN /home/serverspec
 
